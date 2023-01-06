@@ -40,3 +40,13 @@ function createTable(m, n){
     }
     table.appendChild(tbody)
 }
+
+// Add on click listener to the table to paint cells
+table.addEventListener("click", paintCanvas);
+
+function paintCanvas(event) {
+    // Select color input
+    const color = document.querySelector("#colorPicker").value;
+    // console.log(event.target.style.backgroundColor);
+    event.target.style.backgroundColor = color;
+}
